@@ -37,7 +37,7 @@ def value(self):
     return self.__value
 ```
 
-but, leave the setter decorator out.  Attemping to change the value after initialization will result in an error being ased.  However, since nothing is really private in Python, a programmer could access our class member, '__value', but, there's intent with using a property.  
+but, leave the setter decorator out.  Attemping to change the value after initialization will result in an error being raised.  However, since nothing is really private in Python, a programmer could access our class member, '__value', but, there's intent with using a property.  
 
 In order to build on the idea of a card being immutable once constructed, we can also implement the 'dunder' method, \__hash\__ so that we could throw our cards into a hash like structure such as a set or map if need be.  In order to do this, we can just think of a card as a tuple, as suggested above:
 
@@ -172,6 +172,7 @@ python3 mini_game.py
 
 It should produce output similar to the following (but with different cards and result each time):
 
+```shell
 Player One's Cards:
 	9 of Spades
 	Queen of Clubs
@@ -187,3 +188,4 @@ Player Two's Cards:
 Player Two's Top Card: 9 of Hearts
 
 Player One Wins!
+```
