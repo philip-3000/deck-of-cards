@@ -22,7 +22,7 @@ deck = [('Hearts', 1), ('Hearts', 2),..,('Diamonds', 13)]
 where the first item in the tuple is the suit and the second is the card value. However, we want to abstract this a bit so that we can:
 
 - write some modular components to represent a card as well as a deck of cards.
-- have a standard way of comparing cards, i.e., is a 'Queen of Hearts' as valable as a 'Queen of Diamonds'?
+- have a standard way of comparing cards, i.e., is a 'Queen of Hearts' as valuable as a 'Queen of Diamonds'?
 
 We can start with a Card class to represent the current suit and value of a given card, as well as provide some operations we might find useful when playing cards. Let's start with state.  We need:
 
@@ -124,7 +124,7 @@ def pop_card(self) -> Card:
 
 Note that since the Cards themselves are hashable/immutable, we can also store our Cards in a hash like structure such as a set or map, and even an OrderedDictionary class to provide look ups as well as preserve ordering of cards.  However, I elected to keep things simple for now with a list/stack in Python; we might need to utilize the Cards and Deck in an actual Game to see if we need more sophisticated operations on the Deck itself.
 
-# Excercising the Code
+# Exercising the Code
 There's a suite of tests for the Card as well as Deck. You'll need Python3 to execute them.
 
 From the top level directory:
